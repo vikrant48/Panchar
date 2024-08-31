@@ -22,25 +22,27 @@ const Home = () => {
   return (
     <section
       id="home"
-      className="home-bg flex items-center justify-center relative"
+      className="home-bg flex items-center justify-center relative h-screen bg-cover bg-center"
       style={{ backgroundImage: `url(${images[activeImageIndex]})` }}
     >
       {/* Overlay for better text visibility */}
       <div className="absolute inset-0 bg-black opacity-50"></div>
 
       {/* Main Content */}
-      <div className="relative text-center text-white z-10 p-6 bg-black bg-opacity-50 rounded-lg shadow-lg">
-        <h1 className="text-5xl font-bold mb-4">Welcome to Panchar</h1>
-        <p className="text-xl mb-6">Your trusted vehicle assistance service</p>
-        <a href="#contact" className="bg-blue-500 text-white px-6 py-3 rounded-full shadow-lg hover:bg-blue-600 transition">Contact Us</a>
+      <div className="relative text-center text-white z-10 p-6 bg-black bg-opacity-50 rounded-lg shadow-lg max-w-lg mx-auto">
+        <h1 className="text-3xl md:text-5xl font-bold mb-4">Welcome to Panchar</h1>
+        <p className="text-lg md:text-xl mb-6">Your trusted vehicle assistance service</p>
+        <a href="#contact" className="bg-blue-500 text-white px-6 py-3 rounded-full shadow-lg hover:bg-blue-600 transition">
+          Contact Us
+        </a>
       </div>
 
       {/* Dots for navigation */}
-      <div className="dots">
+      <div className="absolute bottom-6 flex justify-center space-x-2 z-10">
         {images.map((_, index) => (
           <div
             key={index}
-            className={`dot ${activeImageIndex === index ? 'active' : ''}`}
+            className={`dot ${activeImageIndex === index ? 'active' : ''} w-3 h-3 rounded-full bg-white opacity-50 cursor-pointer`}
             onClick={() => setActiveImageIndex(index)} // Manually change image on dot click
           />
         ))}
