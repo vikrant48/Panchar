@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Add your custom CSS here */
+.logo {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+
+.nav-link {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.home-bg {
+  background-image: url('/path_to_home_bg_image');
+  background-size: cover;
+  background-position: center;
+}
+
+.about-bg, .services-bg, .contact-bg {
+  background-color: #f0f4f8;
+}
+
+.shadow-card {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.nav-bg {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+

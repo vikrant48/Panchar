@@ -1,0 +1,43 @@
+.why-choose-us-bg {
+    background-color: black;
+    padding: 50px 0;
+  }
+  
+  .car-image-container {
+    position: relative;
+    margin-bottom: 40px;
+  }
+  
+  .car-image {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    display: block;
+  }
+  
+  .service-points .point {
+    width: 15px;
+    height: 15px;
+    background-color: red;
+    border-radius: 50%;
+    position: absolute;
+  }
+  
+  .services-icons .service-icon {
+    width: 150px;
+    text-align: center;
+  }
+  
+  .services-icons .service-icon img {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .service-icon h4 {
+    color: white;
+  }
+  
+  .service-icon p {
+    color: gray;
+  }
+  
