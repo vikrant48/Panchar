@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import logo from '../img/logo.png';
+import Vclogo from '../img/vclogo.jpeg';
+
 import AppointmentModal from '../Components/AppointmentModal';
 
 const Navbar = () => {
@@ -58,7 +60,7 @@ const Navbar = () => {
               </svg>
             </button>
           </div>
-          <ul className="md:flex space-x-4 md:space-x-6 md:ml-auto hidden md:flex">
+          <ul className="md:flex space-x-4 md:space-x-6 md:ml-auto hidden ">
             <li><a href="#home" onClick={(e) => handleScroll(e, "home")} className="text-white hover:text-gray-300">Home</a></li>
             <li><a href="#about" onClick={(e) => handleScroll(e, "about")} className="text-white hover:text-gray-300">About</a></li>
             <li><a href="#services" onClick={(e) => handleScroll(e, "services")} className="text-white hover:text-gray-300">Services</a></li>
@@ -75,30 +77,39 @@ const Navbar = () => {
           </button>
         </div>
         {/* Mobile Menu */}
-        <div className={`md:hidden fixed top-0 left-0 w-full h-full bg-gray-800 text-white flex flex-col items-center justify-center space-y-6 ${isMenuOpen ? 'block' : 'hidden'}`}>
-          <button
-            onClick={() => setIsMenuOpen(false)}
-            className="self-end p-4 text-white"
-          >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
-            </svg>
-          </button>
-          <ul className="space-y-4">
-            <li><a href="#home" onClick={(e) => handleScroll(e, "home")} className="text-white text-xl">Home</a></li>
-            <li><a href="#about" onClick={(e) => handleScroll(e, "about")} className="text-white text-xl">About</a></li>
-            <li><a href="#services" onClick={(e) => handleScroll(e, "services")} className="text-white text-xl">Services</a></li>
-            <li><a href="#contact" onClick={(e) => handleScroll(e, "contact")} className="text-white text-xl">Contact Us</a></li>
-          </ul>
-          <button
-            style={isHovered ? { ...buttonStyle, ...buttonHoverStyle } : buttonStyle}
-            onClick={handleModalOpen}
-            onMouseEnter={() => setIsHovered(true)}
-            onMouseLeave={() => setIsHovered(false)}
-            className="mt-auto mb-4 px-6 py-3 text-lg"
-          >
-            Book an Appointment
-          </button>
+        <div className={`md:hidden fixed top-0 left-0 w-full h-full bg-gray-800 text-white flex flex-col ${isMenuOpen ? 'block' : 'hidden'}`}>
+          <div className="flex flex-col items-center justify-between h-full p-4">
+            {/* Logo at the top */}
+            <div className="flex justify-center mb-8">
+              <img src={Vclogo} alt="Panchar Logo" className="h-12" />
+            </div>
+            {/* Menu Items */}
+            <ul className="flex flex-col items-center space-y-6">
+              <li><a href="#home" onClick={(e) => handleScroll(e, "home")} className="text-white text-xl">Home</a></li>
+              <li><a href="#about" onClick={(e) => handleScroll(e, "about")} className="text-white text-xl">About</a></li>
+              <li><a href="#services" onClick={(e) => handleScroll(e, "services")} className="text-white text-xl">Services</a></li>
+              <li><a href="#contact" onClick={(e) => handleScroll(e, "contact")} className="text-white text-xl">Contact Us</a></li>
+            </ul>
+            {/* Close button */}
+            <button
+              onClick={() => setIsMenuOpen(false)}
+              className="self-end p-4 text-white"
+            >
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+            {/* Button at the bottom */}
+            <button
+              style={isHovered ? { ...buttonStyle, ...buttonHoverStyle } : buttonStyle}
+              onClick={handleModalOpen}
+              onMouseEnter={() => setIsHovered(true)}
+              onMouseLeave={() => setIsHovered(false)}
+              className="mt-auto mb-4 px-6 py-3 text-lg"
+            >
+              Book an Appointment
+            </button>
+          </div>
         </div>
       </nav>
       <AppointmentModal isOpen={isModalOpen} onClose={handleModalClose} />
