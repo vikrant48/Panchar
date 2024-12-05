@@ -60,11 +60,11 @@ const Navbar = () => {
               </svg>
             </button>
           </div>
-          <ul className="md:flex space-x-4 md:space-x-6 md:ml-auto hidden ">
-            <li><a href="#home" onClick={(e) => handleScroll(e, "home")} className="text-white hover:text-gray-300">Home</a></li>
-            <li><a href="#about" onClick={(e) => handleScroll(e, "about")} className="text-white hover:text-gray-300">About</a></li>
-            <li><a href="#services" onClick={(e) => handleScroll(e, "services")} className="text-white hover:text-gray-300">Services</a></li>
-            <li><a href="#contact" onClick={(e) => handleScroll(e, "contact")} className="text-white hover:text-gray-300">Contact Us</a></li>
+          <ul className="md:flex space-x-4 md:space-x-10 md:ml-auto hidden ">
+            <li><a href="#home" onClick={(e) => handleScroll(e, "home")} className="text-white text-xl font-semibold  hover:text-gray-300">Home</a></li>
+            <li><a href="#about" onClick={(e) => handleScroll(e, "about")} className="text-white text-xl font-semibold hover:text-gray-300">About</a></li>
+            <li><a href="#services" onClick={(e) => handleScroll(e, "services")} className="text-white text-xl font-semibold hover:text-gray-300">Services</a></li>
+            <li><a href="#contact" onClick={(e) => handleScroll(e, "contact")} className="text-white text-xl font-semibold hover:text-gray-300">Contact Us</a></li>
           </ul>
           <button
             style={isHovered ? { ...buttonStyle, ...buttonHoverStyle } : buttonStyle}
@@ -84,43 +84,11 @@ const Navbar = () => {
               <img src={Vclogo} alt="Panchar Logo" className="h-12" />
             </div>
             {/* Menu Items */}
-            <ul className="flex flex-col items-center space-y-8">
-              <li>
-                <a
-                  href="#home"
-                  onClick={(e) => handleScroll(e, "home")}
-                  className="text-white text-2xl font-semibold hover:text-yellow-400 transition duration-300 ease-in-out"
-                >
-                  Home
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#about"
-                  onClick={(e) => handleScroll(e, "about")}
-                  className="text-white text-2xl font-semibold hover:text-yellow-400 transition duration-300 ease-in-out"
-                >
-                  About
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#services"
-                  onClick={(e) => handleScroll(e, "services")}
-                  className="text-white text-2xl font-semibold hover:text-yellow-400 transition duration-300 ease-in-out"
-                >
-                  Services
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#contact"
-                  onClick={(e) => handleScroll(e, "contact")}
-                  className="text-white text-2xl font-semibold hover:text-yellow-400 transition duration-300 ease-in-out"
-                >
-                  Contact
-                </a>
-              </li>
+            <ul className="flex flex-col items-center space-y-6">
+              <li><a href="#home" onClick={(e) => handleScroll(e, "home")} className="text-white text-xl">Home</a></li>
+              <li><a href="#about" onClick={(e) => handleScroll(e, "about")} className="text-white text-xl">About</a></li>
+              <li><a href="#services" onClick={(e) => handleScroll(e, "services")} className="text-white text-xl">Services</a></li>
+              <li><a href="#contact" onClick={(e) => handleScroll(e, "contact")} className="text-white text-xl">Contact Us</a></li>
             </ul>
             {/* Close button */}
             <button
